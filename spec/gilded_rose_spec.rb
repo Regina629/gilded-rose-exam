@@ -72,7 +72,15 @@ describe GildedRose do
         end
       end
     end
+	
+	context "when item name is 'Conjured'" do
+      let(:name) { 'Conjured' }
 
+      it "decrease in quality twise as fast as normal items" do
+        expect(item.quality).to eq 8 # from 10 it goes to 8
+      end
+    end
+	
     context "when item name is 'Backstage passes to a TAFKAL80ETC concert'" do
       let(:name) { 'Backstage passes to a TAFKAL80ETC concert' }
 
